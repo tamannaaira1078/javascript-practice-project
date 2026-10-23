@@ -23,3 +23,27 @@ A simple Rock Paper Scissors game where the player chooses Rock, Paper, or Sciss
 
 ## What I Learned
 I practiced using conditional logic to compare the player's move with the computer's move and determine the result.
+
+# Simple Calculator
+
+A simple calculator built using HTML, CSS, and JavaScript.
+![Project Preview](project2.png)
+
+## Features
+- Number buttons (0–9)
+- Basic arithmetic operations (+, -, *, /)
+- Calculate results using the equals button
+- Clear button to reset the calculation
+
+## Concepts Learned
+- JavaScript variables
+- `onclick` events
+- String concatenation
+- Arithmetic operations
+- HTML and CSS basics
+
+## How to Use
+1. Open `calculator.html` in your browser.
+2. Click the number and operator buttons to perform calculations.
+3. Click `=` to calculate the result.
+4. Click `clear` to start a new calculation.

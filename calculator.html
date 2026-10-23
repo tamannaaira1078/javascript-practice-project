@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Calculator Project</title>
+  <style>
+    .num {
+      background-color: lightpink;
+      color: black;
+      font-size: 16px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+      border-radius: 12px;
+    }
+
+    .operators {
+      background-color: lightslategray;
+      color: black;
+      font-size: 16px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+      border-radius: 12px;
+    }
+
+    .clear {
+      background-color: lightblue;
+      color: black;
+      font-size: 16px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+      border-radius: 12px;
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <h1 class="head">Simple Calculator</h1>
+  <p>
+    <button class="num" onclick="
+      calculation+='1';
+      console.log(calculation);
+      ">1</button>
+
+
+    <button class="num" onclick="
+      calculation+='2';
+      console.log(calculation);
+    ">2</button>
+
+
+    <button class="num" onclick="
+      calculation+='3';
+      console.log(calculation);
+    ">3</button>
+
+
+    <button class="operators" onclick="
+     calculation+= '+';
+     console.log(calculation);
+    ">+</button>
+  </p>
+
+  
+  <p>
+    <button class="num" onclick="
+      calculation+= '4';
+      console.log(calculation);
+      
+      ">4</button>
+    <button class="num" onclick="
+      calculation+='5';
+      console.log(calculation);
+    
+    ">5</button>
+    <button class="num" onclick="
+    calculation+= '6';
+    console.log(calculation);
+    
+    ">6</button>
+    <button class="operators" onclick="
+    calculation+='-';
+    console.log(calculation);
+    
+    ">-</button>
+  </p>
+  <p>
+    <button class="num" onclick="
+      calculation+='7';
+      console.log(calculation);
+      
+      
+      ">7</button>
+    <button class="num" onclick="
+    calculation+= '8';
+    console.log(calculation);
+    
+    ">8</button>
+    <button class="num" onclick="
+    calculation+='9';
+    console.log(calculation);
+    
+    ">9</button>
+    <button class="operators" onclick="
+    calculation+= '*';
+    console.log(calculation);
+    
+    ">*</button>
+  </p>
+
+  <p><button class="num" onclick="
+      calculation+= '0';
+      console.log(calculation);
+  
+  ">0</button>
+    <button class="operators" onclick="
+    calculation+='.';
+    console.log(calculation);
+
+    ">.</button>
+    <button class="operators" onclick="
+    calculation=eval(calculation);
+    console.log(calculation);
+    alert(`You answer is ${calculation}`);
+    
+    
+    ">=</button>
+    <button class="operators" onclick="
+    calculation+='/';
+    console.log(calculation);
+    
+    
+    ">/</button>
+  </p>
+
+  <p>
+    <button class="clear" onclick="
+      calculation='';
+      alert('cleared');
+      
+      
+      ">
+      clear
+    </button>
+  </p>
+
+  <script>
+    let calculation='';
+    
+  </script>
+</body>
+
+</html>
