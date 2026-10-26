@@ -3,7 +3,7 @@
 
 My beginner JavaScript practice project.
 
-![Project Preview](project1.png)
+![Project Preview](project1.0.png)
 
 ## About
 A simple Rock Paper Scissors game where the player chooses Rock, Paper, or Scissors, and the computer randomly selects a move.
