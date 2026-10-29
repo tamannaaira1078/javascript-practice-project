@@ -22,7 +22,13 @@
     CalculateTotal()
     
     ">Calculate</button>
+    <button onclick="
+    resetCalculator()
+    
+    ">Reset</button>
     <p class="js-total-cost"></p>
+    <p class="js-reset-message"></p>
+
 
   <script>
     function handleCostKeyDown(event) {
@@ -34,6 +40,8 @@
     }
 
     function CalculateTotal()  {
+        document.querySelector('.js-reset-message').innerHTML = '';
+
        const inputElement = document.querySelector('.js-cost-input')
         let cost =Number(inputElement.value);
         if (cost<40) {
@@ -54,6 +62,16 @@
       }
 
     }
+    function resetCalculator()  {
+
+     document.querySelector('.js-cost-input').value = '';
+
+     document.querySelector('.js-total-cost').innerHTML = '';
+      document.querySelector('.js-reset-message').innerHTML = 'Reset';
+
+
+    };
+    
   </script>
 </body>
 
