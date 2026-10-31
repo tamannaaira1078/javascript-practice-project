@@ -47,3 +47,63 @@ A simple calculator built using HTML, CSS, and JavaScript.
 2. Click the number and operator buttons to perform calculations.
 3. Click `=` to calculate the result.
 4. Click `clear` to start a new calculation.
+
+
+#  Rock Paper Scissors
+
+A browser-based Rock Paper Scissors game built using HTML, CSS, and JavaScript. Play against the computer, track your scores, and keep your game progress saved using Local Storage.
+
+##  Preview
+
+![Rock Paper Scissors Preview][final-project.png]
+
+##  Features
+
+- Play Rock, Paper, Scissors against the computer.
+- Computer randomly generates its move.
+- Automatically determines wins, losses, and ties.
+- Displays both player and computer moves.
+- Tracks wins, losses, and ties.
+- Saves scores using browser Local Storage.
+- Preserves scores even after refreshing the page.
+- Reset the score at any time.
+
+##  Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript
+- Browser Local Storage
+
+## How to Run
+
+1. Clone this repository.
+2. Open the project folder.
+3. Open the HTML file in your browser.
+4. Start playing!
+
+##  Concepts Practiced
+
+- JavaScript functions
+- Conditional statements
+- Variables and objects
+- Random number generation with `Math.random()`
+- DOM manipulation
+- Event handling
+- Template literals
+- JSON serialization and parsing
+- Local Storage (`getItem`, `setItem`, `removeItem`)
+- Managing and updating application state
+
+##  What I Learned
+
+Through this project, I practiced connecting JavaScript with HTML elements, handling user interactions, managing changing data, and saving information in the browser using Local Storage.
+
+I also gained experience building game logic and dynamically updating the user interface.
+
+---
+
+*Built as part of my JavaScript learning journey.*
+
+
+[def]: rock-paper-scissor-final.png
