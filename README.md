@@ -55,7 +55,7 @@ A browser-based Rock Paper Scissors game built using HTML, CSS, and JavaScript. 
 
 ##  Preview
 
-![Rock Paper Scissors Preview][final-project.png]
+![Rock Paper Scissors Preview](final-project.png)
 
 ##  Features
 
