@@ -107,3 +107,26 @@ I also gained experience building game logic and dynamically updating the user i
 
 
 [def]: rock-paper-scissor-final.png
+
+# Todo List
+
+My beginner JavaScript practice project.
+
+![Project Preview](todoList-project.png)
+
+## About
+
+A simple Todo List application where users can add tasks with due dates, view their tasks, and delete individual tasks.
+
+## Concepts Practiced
+
+- JavaScript arrays and objects
+- Object destructuring
+- Functions
+- `for` loops
+- Array methods (`push()` and `splice()`)
+- DOM manipulation using `querySelector()`
+- Dynamic HTML rendering
+- Template literals
+- CSS Grid layout
+- HTML buttons and click events
