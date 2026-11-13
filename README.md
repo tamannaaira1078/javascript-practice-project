@@ -207,6 +207,11 @@ A simple, interactive Password Strength Checker built using HTML, CSS, and JavaS
 
 The project evaluates password length and provides real-time feedback using a three-bar strength indicator.
 
+![Project Preview](password-checker-pic1.png)
+![Project Preview](password-checker-pic2.png)
+![Project Preview](password-checker-pic3.png)
+![Project Preview](password-checker-pic4.png)
+
 ## Features
 
 - Real-time password strength feedback
