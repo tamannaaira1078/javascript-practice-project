@@ -130,3 +130,72 @@ A simple Todo List application where users can add tasks with due dates, view th
 - Template literals
 - CSS Grid layout
 - HTML buttons and click events
+
+# Smart Character Counter
+
+A simple and interactive character counter built using HTML, CSS, and JavaScript. It tracks user input in real time and provides visual feedback through a dynamic progress bar.
+![Project Preview](smart-counter-pic1.png)
+![Project Preview](smart-counter-pic2.png)
+
+## Features
+
+- Real-time character counting
+- Dynamic progress bar
+- Color-changing progress indicator:
+  - Gray: Empty input
+  - Green: Below the character limit
+  - Orange: Character limit reached
+  - Red: Character limit exceeded
+- Dynamic warning messages
+- Progress bar limited to 100%
+- Configurable character limit (default: 20)
+- Automatic interface initialization
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript (Vanilla JS)
+
+## How It Works
+
+1. The user enters text into the input field.
+2. JavaScript detects changes using an `input` event listener.
+3. The program calculates the character count.
+4. The progress percentage is calculated using:
+
+   `Math.min((characterCount / limit) * 100, 100)`
+
+5. The progress bar width and color update dynamically.
+6. A message displays the current character-limit status.
+
+## Getting Started
+
+1. Clone or download the repository.
+2. Open the project folder in VS Code.
+3. Open the HTML file in your browser.
+4. Start typing to see the character counter in action.
+
+No additional libraries or dependencies are required.
+
+## What I Learned
+
+- DOM manipulation using `querySelector()`
+- Event handling with `addEventListener()`
+- Conditional logic using `if`, `else if`, and `else`
+- Dynamically updating CSS with JavaScript
+- Working with string properties and percentages
+- Using `Math.min()` to control maximum values
+- Refactoring code into functions
+- Testing edge cases and UI state changes
+
+## Future Improvements
+
+- Add mobile-responsive styling
+- Improve accessibility
+- Add a customizable character limit
+- Add automated tests
+
+## Project Status
+
+Core functionality completed and manually tested.

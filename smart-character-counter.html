@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .progress-track {
+      width: 300px;
+      height: 12px;
+      background-color: lightgrey;
+      border-radius: 10px;
+      overflow:hidden;
+    }
+
+    .progress-fill {
+      width:0%;
+      height: 100%;
+      background-color:green ;
+      border-radius: 10px;
+    }
+
+    .character-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width:300px;
+      margin-bottom: 10px;
+    }
+
+    .text-input{
+      border: solid 1px black;
+      border-radius: 10px;
+      padding: 8px 8px;
+
+    }
+
+    
+  </style>
+</head>
+
+<body>
+
+  <input class="text-input" placeholder="Write-Here">
+  
+  <div class="character-info"> 
+    <div class="character-message"></div>
+    <div class="character-count">0</div>
+  </div>
+
+
+  <div class="progress-track">
+    <div class="progress-fill"></div>
+  </div>
+
+  <script>
+    const input = document.querySelector('.text-input');
+    const counter = document.querySelector('.character-count');
+    const message = document.querySelector('.character-message');
+    const progressFill= document.querySelector('.progress-fill');
+    const limit =20;
+
+    updateCharacterCounter()
+
+    function updateCharacterCounter() {
+
+      const characterCount = input.value.length;
+      counter.textContent =`${characterCount} / ${limit}`;
+     
+      const percentage= Math.min((characterCount/limit)*100, 100);
+      progressFill.style.width = `${percentage}%`;
+
+     
+      if (characterCount===0) {
+        message.textContent = 'keep typing'; progressFill.style.backgroundColor = "grey";
+      } else if (characterCount<limit) {
+        message.textContent = 'keep typing'; progressFill.style.backgroundColor = "green";
+
+      }
+       else if (characterCount === limit) {
+        message.textContent = 'Limit Reached'; progressFill.style.backgroundColor = "orange";
+      } else {
+        message.textContent = 'Too many characters'; progressFill.style.backgroundColor = "red";
+      }
+     
+
+    }
+    
+    input.addEventListener('input', ()=>{
+      updateCharacterCounter()
+
+    });
+
+  </script>
+</body>
+
+</html>
