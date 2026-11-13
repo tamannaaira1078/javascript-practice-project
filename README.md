@@ -199,3 +199,67 @@ No additional libraries or dependencies are required.
 ## Project Status
 
 Core functionality completed and manually tested.
+
+
+# Password Strength Checker 🔐
+
+A simple, interactive Password Strength Checker built using HTML, CSS, and JavaScript.
+
+The project evaluates password length and provides real-time feedback using a three-bar strength indicator.
+
+## Features
+
+- Real-time password strength feedback
+- Three-bar visual strength indicator
+- Dynamic color changes based on password length
+- Live character counter
+- Show/Hide password functionality
+- Automatic reset when the input is cleared
+- DOM manipulation and event handling
+
+## Password Strength Rules
+
+| Password Length | Strength | Indicator |
+|---|---|---|
+| 0 characters | Empty | No active bars |
+| 1–5 characters | Weak | 1 red bar |
+| 6–9 characters | Medium | 2 orange bars |
+| 10+ characters | Strong | 3 green bars |
+
+**Note:** This project uses password length to demonstrate conditional logic. It is not a real-world password security assessment.
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript (Vanilla JS)
+
+## How to Run
+
+1. Clone or download the repository.
+2. Open the HTML file in your browser.
+3. Enter a sample password to see the strength indicator update.
+4. Click the Show/Hide button to toggle password visibility.
+
+## What I Learned
+
+- Breaking project requirements into smaller tasks
+- Using `document.querySelector()` to select DOM elements
+- Handling `input` and `click` events
+- Using conditional statements to manage different states
+- Dynamically updating CSS with JavaScript
+- Organizing logic into functions
+- Testing boundary conditions and state changes
+- Searching for syntax and adapting existing code examples
+
+## Future Improvements
+
+- Implement more meaningful password-strength checks
+- Improve responsive design
+- Refactor repetitive CSS and JavaScript
+- Improve accessibility
+- Add automated tests
+
+## Project Purpose
+
+This project was built to strengthen my JavaScript fundamentals, DOM manipulation, event handling, and independent problem-solving skills.
