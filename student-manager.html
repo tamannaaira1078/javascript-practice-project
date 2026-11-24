@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Student-Grade-Manager</title>
+
+  <style>
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f5eaff, #ffeaf4, #e9f0ff);
+  min-height: 100vh;
+  margin: 0;
+  padding: 45px 20px;
+  color: #39334f;
+}
+
+
+
+h1 {
+  text-align: center;
+  font-size: 32px;
+  color: #7753ab;
+  margin-bottom: 35px;
+  letter-spacing: -1px;
+}
+
+
+
+body > p:not([class]) {
+  max-width: 580px;
+  margin: 15px auto 7px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #625774;
+}
+
+
+
+.name-input,
+.mark-input {
+  display: block;
+  width: 100%;
+  max-width: 580px;
+  margin: 0 auto 18px;
+  padding: 15px 18px;
+
+  border: 2px solid #e7daf5;
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.9);
+  font-family: inherit;
+  font-size: 15px;
+  color: #39334f;
+
+  outline: none;
+  transition: 0.25s ease;
+}
+
+.name-input:focus,
+.mark-input:focus {
+  border-color: #ae87df;
+  box-shadow: 0 0 0 4px rgba(174, 135, 223, 0.15);
+}
+
+/* Add button */
+
+.add-button {
+  display: block;
+  width: 100%;
+  max-width: 580px;
+  margin: 25px auto 40px;
+
+  padding: 15px;
+  border: none;
+  border-radius: 14px;
+
+  background: linear-gradient(135deg, #9c75d7, #d48cba);
+  color: white;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(156, 117, 215, 0.25);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.add-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(156, 117, 215, 0.35);
+}
+
+.add-button:active {
+  transform: scale(0.98);
+}
+
+
+
+h3,
+h4 {
+  max-width: 580px;
+  margin: 26px auto 12px;
+  color: #7753ab;
+  font-weight: 600;
+}
+
+
+.student-list {
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+.student-list > div {
+  background: white;
+  padding: 18px 20px;
+  margin-bottom: 12px;
+  border-radius: 16px;
+
+  border: 1px solid #efe5f8;
+  box-shadow: 0 6px 20px rgba(91, 68, 131, 0.07);
+
+  animation: slideIn 0.3s ease;
+  transition: transform 0.2s;
+}
+
+.student-list > div:hover {
+  transform: translateY(-2px);
+}
+
+
+
+.student-list p {
+  display: inline-block;
+  padding: 5px 13px;
+  margin: 10px 0;
+
+  border-radius: 20px;
+  background: #e6f8ec;
+  color: #27824a;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Remove buttons */
+
+.student-list button {
+  display: block;
+  margin-top: 8px;
+  padding: 9px 16px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #ffe5e9;
+  color: #c34d65;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.student-list button:hover {
+  background: #ffcbd5;
+  transform: translateY(-2px);
+}
+
+/* Statistics */
+
+.total-students,
+.average-marks,
+.passed-students,
+.failed-students,
+.highest-score {
+  max-width: 580px;
+  margin: 0 auto 16px;
+
+  padding: 18px 22px;
+  background: rgba(255, 255, 255, 0.9);
+
+  border: 1px solid #efe5f8;
+  border-left: 5px solid #b18cdd;
+  border-radius: 14px;
+
+  box-shadow: 0 5px 18px rgba(91, 68, 131, 0.05);
+
+  font-size: 22px;
+  font-weight: 600;
+  color: #7753ab;
+}
+
+.passed-students {
+  border-left-color: #65bd89;
+  color: #31965c;
+}
+
+.failed-students {
+  border-left-color: #ef8e9d;
+  color: #cc6075;
+}
+
+.highest-score {
+  border-left-color: #edba63;
+  color: #b5802f;
+}
+
+
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+@media (max-width: 600px) {
+  body {
+    padding: 25px 15px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  .total-students,
+  .average-marks,
+  .passed-students,
+  .failed-students,
+  .highest-score {
+    font-size: 19px;
+  }
+}
+
+
+  </style>
+</head>
+
+<body>
+  <h1>Student Grade Manager</h1>
+
+  <p>Student name</p>
+
+  <input class="name-input" placeholder="e.g.Alex">
+
+  <p>Marks(0-100)</p>
+
+  <input class="mark-input" placeholder="e.g.85" type="number">
+
+  <button class="add-button">Add Student</button>
+
+  <h3>Student List</h3>
+
+  <div class="student-list"></div>
+
+  <h4>Total Students</h4>
+
+  <p class="total-students">0</p>
+
+  <h4>Average marks</h4>
+
+  <p class="average-marks">0.00</p>
+
+  <h4>Passed students</h4>
+
+  <p class="passed-students">0</p>
+
+  <h4>Failed Students</h4>
+
+  <p class="failed-students">0</p>
+
+  <h4>Highest Scoring Student</h4>
+  <p class="highest-score"></p>
+
+  <script>
+
+    const nameInput = document.querySelector('.name-input');
+
+    const markInput = document.querySelector('.mark-input');
+
+    const buttonElement = document.querySelector('.add-button');
+
+    const studentList = document.querySelector('.student-list');
+
+    const totalStudents = document.querySelector('.total-students');
+
+    const averageMarks = document.querySelector('.average-marks');
+
+    const passed = document.querySelector('.passed-students');
+
+    const failed = document.querySelector('.failed-students');
+
+    const highestScore = document.querySelector('.highest-score');
+
+    const gradeManager = [];
+
+    buttonElement.addEventListener('click', () => {
+      const nameValue = nameInput.value.trim();
+
+      const rawMark = markInput.value.trim();
+
+      const markValue = Number(rawMark);
+
+      if (nameValue === '' || rawMark=== '') {
+        alert(`Please enter  valid input`);
+      } else if (!Number.isFinite(markValue)  || markValue < 0 || markValue > 100) {
+        alert(`Please enter a valid mark between 0 and 100`)
+      } else {
+        gradeManager.push({
+          name: nameValue,
+          mark: markValue
+
+        });
+        updateManager();
+
+        nameInput.value='';
+        markInput.value='';
+
+      }
+
+    })
+
+    function renderStudentList() {
+
+      studentList.innerHTML = '';
+
+
+      gradeManager.forEach((student, index) => {
+
+        const row1 = document.createElement('div');
+
+        const removeButton = document.createElement('button');
+
+        const status= document.createElement('p');
+
+
+
+        row1.textContent = `${student.name}- ${student.mark}/100`;
+        
+
+        status.textContent = `${student.mark>=40 ? 'Pass' : 'Fail'}`;
+
+        removeButton.textContent = `Remove`;
+
+        removeButton.addEventListener('click', () => {
+          gradeManager.splice(index, 1);
+          updateManager();
+
+        })
+
+        row1.appendChild(status);
+        row1.appendChild(removeButton);
+        studentList.appendChild(row1);
+
+      });
+
+    }
+
+    function calculateTotal() {
+      return gradeManager.length;
+    }
+
+    function renderTotalStudents() {
+      const totalStudent = calculateTotal();
+
+      totalStudents.textContent = `${totalStudent}`;
+
+    }
+
+    function calculateAverage() {
+      
+      if(gradeManager.length===0) {
+        averageMarks.textContent= `0.00`;
+        return ;
+
+      } 
+      let averageMark = 0;
+
+      for (let i = 0; i < gradeManager.length; i++) {
+        averageMark += gradeManager[i].mark;
+
+
+      }
+      
+      averageMarks.textContent = `${(averageMark / gradeManager.length).toFixed(2)}`;
+    }
+
+    function calculatePassFail() {
+      let pass = 0;
+      let fail = 0;
+
+      for (let i = 0; i < gradeManager.length; i++) {
+        if (gradeManager[i].mark >= 40) {
+          pass += 1;
+        } else {
+          fail += 1;
+        }
+      }
+
+      passed.textContent = `${pass}`;
+      failed.textContent = `${fail}`;
+
+
+    }
+
+    function calculateHighestScore() {
+      
+
+      if (gradeManager.length===0) {
+        highestScore.textContent = `None`;
+        return;
+      }
+      let topStudent = gradeManager[0];
+
+      for (let i = 0; i < gradeManager.length; i++) {
+        if (gradeManager[i].mark > topStudent.mark) {
+          topStudent = gradeManager[i];
+
+        }
+
+      }
+
+      highestScore.textContent = `${topStudent.name}-${topStudent.mark}`;
+
+
+    }
+
+
+    function updateManager() {
+
+      renderStudentList();
+      renderTotalStudents();
+      calculateAverage();
+      calculatePassFail();
+      calculateHighestScore();
+
+    }
+
+
+  </script>
+
+</body>
+
+</html>
