@@ -268,3 +268,119 @@ The project evaluates password length and provides real-time feedback using a th
 ## Project Purpose
 
 This project was built to strengthen my JavaScript fundamentals, DOM manipulation, event handling, and independent problem-solving skills.
+
+
+# Student Grade Manager
+
+A simple, interactive Student Grade Manager built using **HTML, CSS, and vanilla JavaScript**.
+
+This project allows users to add students, track their marks, calculate class statistics, and remove student records. All information updates dynamically without refreshing the webpage.
+
+![Project Preview](std-grade1.png)
+![Project Preview](std-grade2.png)
+
+## Features
+
+- Add students with their names and marks.
+- Validate student names and marks (0–100).
+- Accept decimal marks and zero.
+- Automatically assign Pass/Fail status (passing mark: 40).
+- Display the total number of students.
+- Calculate average marks.
+- Count passed and failed students.
+- Identify the highest-scoring student.
+- Remove individual students.
+- Automatically update statistics after adding or removing a student.
+- Handle empty student lists.
+- Clear input fields after successful submissions.
+- Responsive, pastel-themed interface.
+
+## Technologies Used
+
+- **HTML5** — Page structure
+- **CSS3** — Styling, layout, and animations
+- **JavaScript (ES6+)** — Application logic and DOM manipulation
+
+## How It Works
+
+1. The user enters a student's name and marks.
+2. JavaScript validates the submitted information.
+3. Valid student data is stored as an object inside an array.
+4. The student list is rendered dynamically.
+5. The application calculates and displays class statistics.
+6. Removing a student automatically updates the list and statistics.
+
+## JavaScript Concepts Practiced
+
+- Arrays and objects
+- Functions and return statements
+- DOM manipulation
+- Event listeners
+- `forEach()` and `for` loops
+- Conditional statements and ternary operators
+- Array manipulation using `push()` and `splice()`
+- Input validation using `trim()`, `Number()`, and `Number.isFinite()`
+- Dynamic HTML element creation
+- Early returns and edge-case handling
+
+##  Input Validation
+
+The application accepts:
+
+- Non-empty student names
+- Marks between 0 and 100 (inclusive)
+- Decimal marks such as 85.5
+
+It rejects:
+
+- Empty or whitespace-only names
+- Empty marks
+- Negative marks
+- Marks greater than 100
+- Non-finite numeric values
+
+## Testing
+
+The application was manually tested for:
+
+- Adding valid student records
+- Pass/Fail classification
+- Average marks and student counts
+- Highest-scoring student calculation
+- Invalid and boundary inputs
+- Removing students from different positions
+- Removing the last student
+- Empty-array handling
+- Automatic statistics updates
+
+**Final result:** 12/12 planned regression tests passed.
+
+##  How to Run
+
+1. Clone or download this repository.
+2. Open the project folder.
+3. Open the HTML file in a web browser.
+4. Enter student information and start managing records.
+
+No additional dependencies or installation are required.
+
+##  Limitations
+
+- Student records are stored in memory and disappear when the page is refreshed.
+- Data is not connected to a database.
+- Editing existing student records is not supported.
+- When multiple students share the highest marks, the first matching student is displayed.
+
+##  Future Improvements
+
+- Add `localStorage` to preserve student records.
+- Allow users to edit existing marks.
+- Add sorting and filtering.
+- Introduce search functionality.
+- Export student reports as CSV files.
+
+##  Project Purpose
+
+This project was developed to strengthen JavaScript fundamentals, independent problem-solving, debugging, input validation, and DOM manipulation skills.
+
+It was built as part of a JavaScript learning bootcamp, with an emphasis on understanding application logic and testing edge cases.
